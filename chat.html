@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProTrain - AI Coach</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .chat-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: var(--dark);
+        }
+        
+        .chat-header {
+            background: var(--gradient);
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .coach-avatar {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .coach-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .coach-status {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+            background: var(--dark);
+        }
+        
+        .chat-input-container {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--dark-light);
+        }
+        
+        .streaming-text {
+            position: relative;
+        }
+        
+        .streaming-text::after {
+            content: '▋';
+            animation: blink 1s infinite;
+            margin-left: 2px;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-left">
+                <div class="coach-avatar">🤖</div>
+                <div class="header-info">
+                    <div class="coach-name" id="selected-sport">AI Coach</div>
+                    <div class="coach-status">Online • Ready to help</div>
+                </div>
+            </div>
+            <button onclick="window.close()" style="
+                background: rgba(255,255,255,0.15);
+                border: 1px solid rgba(255,255,255,0.25);
+                color: white;
+                width: 36px;
+                height: 36px;
+                border-radius: 8px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.1rem;
+                transition: background 0.2s;
+                flex-shrink: 0;
+            " onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'" title="Close">✕</button>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <div class="message-group bot">
+                <div class="message-avatar">🤖</div>
+                <div class="message-bubble bot-bubble">
+                    <p>Welcome to Sports Master! 👋</p>
+                    <p>I'm your AI coach. Ask me anything about techniques, training, rules, or strategy!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <div id="text-input-section" class="input-box">
+                <input type="text" id="user-input" placeholder="Ask about techniques, training tips, rules..." />
+                <button class="send-btn" onclick="sendMessage()">
+                    <span>➤</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Check if sport was passed from main window
+        if (window.opener && window.opener.selectedSportFromMain) {
+            selectedSport = window.opener.selectedSportFromMain;
+            document.getElementById('selected-sport').textContent = selectedSport + ' Coach';
+            
+            // Add welcome message
+            setTimeout(() => {
+                addBotMessage(`🏆 Excellent choice! I'm your ${selectedSport} expert coach. I can help you with:\n\n• Techniques and form corrections\n• Training plans and drills\n• Rules and game strategies\n• Nutrition and fitness tips\n\nWhat would you like to know about ${selectedSport}?`);
+            }, 100);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Master - Elite Training Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div class="particles"></div>
+    
+    <!-- Side Navigation -->
+    <nav class="sidenav">
+        <div class="logo-section">
+            <div class="logo-svg-wrap">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="lg1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#6366f1"/>
+                            <stop offset="100%" stop-color="#8b5cf6"/>
+                        </linearGradient>
+                        <linearGradient id="lg2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#a5b4fc"/>
+                            <stop offset="100%" stop-color="#c4b5fd"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Hexagon background -->
+                    <polygon points="24,2 44,13 44,35 24,46 4,35 4,13" fill="url(#lg1)" opacity="0.15" stroke="url(#lg1)" stroke-width="1.5"/>
+                    <!-- Barbell bar -->
+                    <rect x="8" y="22" width="32" height="4" rx="2" fill="url(#lg2)"/>
+                    <!-- Left weight plates -->
+                    <rect x="6" y="16" width="5" height="16" rx="2.5" fill="url(#lg1)"/>
+                    <rect x="4" y="19" width="3" height="10" rx="1.5" fill="url(#lg1)" opacity="0.7"/>
+                    <!-- Right weight plates -->
+                    <rect x="37" y="16" width="5" height="16" rx="2.5" fill="url(#lg1)"/>
+                    <rect x="41" y="19" width="3" height="10" rx="1.5" fill="url(#lg1)" opacity="0.7"/>
+                    <!-- Center highlight spark -->
+                    <polygon points="24,10 26,21 24,20 22,21" fill="url(#lg2)" opacity="0.9"/>
+                </svg>
+            </div>
+            <div class="logo-text-block">
+                <span class="logo-text">ProTrain</span>
+                <span class="logo-tagline">Elite Performance</span>
+            </div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-item active">
+                <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+                <span>Home</span></a></li>
+            <li><a href="#sports" class="nav-item">
+                <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+                <span>Sports</span></a></li>
+            <li><a href="#workout" class="nav-item">
+                <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v16M18 4v16M3 8h4M17 8h4M3 16h4M17 16h4M7 8h10M7 16h10"/></svg></span>
+                <span>Workout</span></a></li>
+            <li><a href="#ai-coach" class="nav-item">
+                <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="1" fill="currentColor" stroke="none"/></svg></span>
+                <span>AI Coach</span></a></li>
+            <li><a href="#calcount" class="nav-item">
+                <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
+                <span>CalCount</span></a></li>
+            <li><a href="#diet-planner" class="nav-item">
+                <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 1 7 7c0 4-3 6-4 9H9c-1-3-4-5-4-9a7 7 0 0 1 7-7z"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></span>
+                <span>Diet Planner</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <span class="badge">AI-Powered Sports & Fitness Trainer</span>
+                    <h1 class="main-title">Train Hard. Play Strong. Live Fit.</h1>
+                    <p class="main-subtitle">Master every sport with personalized AI coaching,expert guidance tailored to your goals.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="scrollToSection('sports')">Explore Sports</button>
+                        <button class="btn-secondary" onclick="toggleChatbot()">Start Coaching</button>
+
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">30+</div>
+                            <div class="stat-label">Sports Covered</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">AI</div>
+                            <div class="stat-label">Powered Coach</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Available</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-image-container">
+                        <div class="floating-card card-1">
+                            <span class="card-icon">🏆</span>
+                            <span class="card-text">Elite Training</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <span class="card-icon">📊</span>
+                            <span class="card-text">Performance Analytics</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <span class="card-icon">🎯</span>
+                            <span class="card-text">Goal Tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sports Selection Section -->
+        <section id="sports" class="sports-section">
+            <div class="section-header">
+                <span class="section-badge">Choose Your Game</span>
+                <h2 class="section-title">Master Any Sport</h2>
+                <p class="section-subtitle">Select from our comprehensive collection of sports and get personalized coaching</p>
+            </div>
+            
+            <div class="sports-categories">
+                <button class="category-btn active" onclick="filterSports('all')">All Sports</button>
+                <button class="category-btn" onclick="filterSports('team')">Team Sports</button>
+                <button class="category-btn" onclick="filterSports('individual')">Individual Sports</button>
+                <button class="category-btn" onclick="filterSports('racquet')">Racquet Sports</button>
+                <button class="category-btn" onclick="filterSports('board')">Board Games</button>
+            </div>
+
+            <div class="sports-grid-new">
+                <!-- Team Sports -->
+                <div class="sport-card-new" data-category="team" onclick="selectSport('Cricket')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏏</div>
+                        <h3>Cricket</h3>
+                        <p>Batting, Bowling & Fielding</p>
+                        <div class="sport-tags">
+                            <span class="tag">Team</span>
+                            <span class="tag">Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="team" onclick="selectSport('Football')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">⚽</div>
+                        <h3>Football</h3>
+                        <p>Dribbling, Passing & Shooting</p>
+                        <div class="sport-tags">
+                            <span class="tag">Team</span>
+                            <span class="tag">Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="team" onclick="selectSport('Basketball')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏀</div>
+                        <h3>Basketball</h3>
+                        <p>Shooting, Defense & Rebounds</p>
+                        <div class="sport-tags">
+                            <span class="tag">Team</span>
+                            <span class="tag">Indoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="team" onclick="selectSport('Volleyball')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏐</div>
+                        <h3>Volleyball</h3>
+                        <p>Serving, Spiking & Blocking</p>
+                        <div class="sport-tags">
+                            <span class="tag">Team</span>
+                            <span class="tag">Indoor/Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="team" onclick="selectSport('Hockey')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏑</div>
+                        <h3>Hockey</h3>
+                        <p>Stick Skills & Game Strategy</p>
+                        <div class="sport-tags">
+                            <span class="tag">Team</span>
+                            <span class="tag">Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="team" onclick="selectSport('Kabaddi')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🤼</div>
+                        <h3>Kabaddi</h3>
+                        <p>Raiding, Tackling & Defense</p>
+                        <div class="sport-tags">
+                            <span class="tag">Team</span>
+                            <span class="tag">Indoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="team" onclick="selectSport('Kho Kho')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏃</div>
+                        <h3>Kho Kho</h3>
+                        <p>Speed, Agility & Pursuit</p>
+                        <div class="sport-tags">
+                            <span class="tag">Team</span>
+                            <span class="tag">Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="team" onclick="selectSport('Rugby')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏉</div>
+                        <h3>Rugby</h3>
+                        <p>Tackling, Scrums & Tries</p>
+                        <div class="sport-tags">
+                            <span class="tag">Team</span>
+                            <span class="tag">Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="team" onclick="selectSport('Baseball')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">⚾</div>
+                        <h3>Baseball</h3>
+                        <p>Batting, Pitching & Fielding</p>
+                        <div class="sport-tags">
+                            <span class="tag">Team</span>
+                            <span class="tag">Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="team" onclick="selectSport('American Football')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏈</div>
+                        <h3>American Football</h3>
+                        <p>Passing, Blocking & Playbooks</p>
+                        <div class="sport-tags">
+                            <span class="tag">Team</span>
+                            <span class="tag">Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="team" onclick="selectSport('Handball')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🤾</div>
+                        <h3>Handball</h3>
+                        <p>Passing, Shooting & Defense</p>
+                        <div class="sport-tags">
+                            <span class="tag">Team</span>
+                            <span class="tag">Indoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Racquet Sports -->
+                <div class="sport-card-new" data-category="racquet" onclick="selectSport('Badminton')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏸</div>
+                        <h3>Badminton</h3>
+                        <p>Smashes, Drops & Footwork</p>
+                        <div class="sport-tags">
+                            <span class="tag">Racquet</span>
+                            <span class="tag">Indoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="racquet" onclick="selectSport('Tennis')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🎾</div>
+                        <h3>Tennis</h3>
+                        <p>Serves, Volleys & Baseline</p>
+                        <div class="sport-tags">
+                            <span class="tag">Racquet</span>
+                            <span class="tag">Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="racquet" onclick="selectSport('Table Tennis')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏓</div>
+                        <h3>Table Tennis</h3>
+                        <p>Spin, Speed & Precision</p>
+                        <div class="sport-tags">
+                            <span class="tag">Racquet</span>
+                            <span class="tag">Indoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="racquet" onclick="selectSport('Squash')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🎾</div>
+                        <h3>Squash</h3>
+                        <p>Speed, Agility & Wall Play</p>
+                        <div class="sport-tags">
+                            <span class="tag">Racquet</span>
+                            <span class="tag">Indoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="racquet" onclick="selectSport('Pickleball')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏸</div>
+                        <h3>Pickleball</h3>
+                        <p>Dinking, Volleys & Strategy</p>
+                        <div class="sport-tags">
+                            <span class="tag">Racquet</span>
+                            <span class="tag">Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Individual Sports -->
+                <div class="sport-card-new" data-category="individual" onclick="selectSport('Athletics')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏃‍♂️</div>
+                        <h3>Athletics</h3>
+                        <p>Running, Jumping & Throwing</p>
+                        <div class="sport-tags">
+                            <span class="tag">Individual</span>
+                            <span class="tag">Track & Field</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="individual" onclick="selectSport('Swimming')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏊</div>
+                        <h3>Swimming</h3>
+                        <p>Strokes, Breathing & Endurance</p>
+                        <div class="sport-tags">
+                            <span class="tag">Individual</span>
+                            <span class="tag">Aquatic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="individual" onclick="selectSport('Boxing')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🥊</div>
+                        <h3>Boxing</h3>
+                        <p>Punches, Defense & Footwork</p>
+                        <div class="sport-tags">
+                            <span class="tag">Individual</span>
+                            <span class="tag">Combat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="individual" onclick="selectSport('Wrestling')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🤼‍♂️</div>
+                        <h3>Wrestling</h3>
+                        <p>Grappling, Throws & Pins</p>
+                        <div class="sport-tags">
+                            <span class="tag">Individual</span>
+                            <span class="tag">Combat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="individual" onclick="selectSport('Gymnastics')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🤸</div>
+                        <h3>Gymnastics</h3>
+                        <p>Flexibility, Balance & Strength</p>
+                        <div class="sport-tags">
+                            <span class="tag">Individual</span>
+                            <span class="tag">Artistic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="individual" onclick="selectSport('Cycling')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🚴</div>
+                        <h3>Cycling</h3>
+                        <p>Endurance, Speed & Technique</p>
+                        <div class="sport-tags">
+                            <span class="tag">Individual</span>
+                            <span class="tag">Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="individual" onclick="selectSport('Weightlifting')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏋️</div>
+                        <h3>Weightlifting</h3>
+                        <p>Snatch, Clean & Jerk Techniques</p>
+                        <div class="sport-tags">
+                            <span class="tag">Individual</span>
+                            <span class="tag">Strength</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="individual" onclick="selectSport('Taekwondo')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🥋</div>
+                        <h3>Taekwondo</h3>
+                        <p>Kicks, Forms & Sparring</p>
+                        <div class="sport-tags">
+                            <span class="tag">Individual</span>
+                            <span class="tag">Martial Art</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="individual" onclick="selectSport('Judo')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🥋</div>
+                        <h3>Judo</h3>
+                        <p>Throws, Groundwork & Ippon</p>
+                        <div class="sport-tags">
+                            <span class="tag">Individual</span>
+                            <span class="tag">Martial Art</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="individual" onclick="selectSport('Golf')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">⛳</div>
+                        <h3>Golf</h3>
+                        <p>Swing, Putting & Course Strategy</p>
+                        <div class="sport-tags">
+                            <span class="tag">Individual</span>
+                            <span class="tag">Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="individual" onclick="selectSport('Archery')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🏹</div>
+                        <h3>Archery</h3>
+                        <p>Aim, Stance & Release Technique</p>
+                        <div class="sport-tags">
+                            <span class="tag">Individual</span>
+                            <span class="tag">Precision</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="individual" onclick="selectSport('Shooting')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🎯</div>
+                        <h3>Shooting</h3>
+                        <p>Precision, Grip & Target Focus</p>
+                        <div class="sport-tags">
+                            <span class="tag">Individual</span>
+                            <span class="tag">Precision</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Board Games -->
+                <div class="sport-card-new" data-category="board" onclick="selectSport('Chess')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">♟️</div>
+                        <h3>Chess</h3>
+                        <p>Strategy, Tactics & Endgames</p>
+                        <div class="sport-tags">
+                            <span class="tag">Board Game</span>
+                            <span class="tag">Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="board" onclick="selectSport('Carrom')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🎯</div>
+                        <h3>Carrom</h3>
+                        <p>Striking, Angles & Precision</p>
+                        <div class="sport-tags">
+                            <span class="tag">Board Game</span>
+                            <span class="tag">Skill</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="board" onclick="selectSport('Ludo')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🎲</div>
+                        <h3>Ludo</h3>
+                        <p>Strategy, Luck & Tactics</p>
+                        <div class="sport-tags">
+                            <span class="tag">Board Game</span>
+                            <span class="tag">Family</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="board" onclick="selectSport('Checkers')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">⬛</div>
+                        <h3>Checkers</h3>
+                        <p>Moves, Jumps & Kings</p>
+                        <div class="sport-tags">
+                            <span class="tag">Board Game</span>
+                            <span class="tag">Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="board" onclick="selectSport('Backgammon')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🎲</div>
+                        <h3>Backgammon</h3>
+                        <p>Probability, Strategy & Tactics</p>
+                        <div class="sport-tags">
+                            <span class="tag">Board Game</span>
+                            <span class="tag">Classic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="board" onclick="selectSport('Scrabble')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🔤</div>
+                        <h3>Scrabble</h3>
+                        <p>Vocabulary, Strategy & Scoring</p>
+                        <div class="sport-tags">
+                            <span class="tag">Board Game</span>
+                            <span class="tag">Word</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="board" onclick="selectSport('Monopoly')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🎩</div>
+                        <h3>Monopoly</h3>
+                        <p>Trading, Negotiation & Properties</p>
+                        <div class="sport-tags">
+                            <span class="tag">Board Game</span>
+                            <span class="tag">Economic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="board" onclick="selectSport('Poker')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🃏</div>
+                        <h3>Poker</h3>
+                        <p>Bluffing, Odds & Hand Rankings</p>
+                        <div class="sport-tags">
+                            <span class="tag">Card Game</span>
+                            <span class="tag">Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sport-card-new" data-category="board" onclick="selectSport('Bridge')">
+                    <div class="sport-card-inner">
+                        <div class="sport-icon-large">🃏</div>
+                        <h3>Bridge</h3>
+                        <p>Bidding, Declarer Play & Defense</p>
+                        <div class="sport-tags">
+                            <span class="tag">Card Game</span>
+                            <span class="tag">Classic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- Workout Section -->
+        <section id="workout" class="workout-section">
+            <div class="section-header">
+                <span class="section-badge">Muscle Training</span>
+                <h2 class="section-title">Choose Your Muscle</h2>
+                <p class="section-subtitle">Select a muscle group to explore targeted exercises and training tips</p>
+            </div>
+
+            <div class="muscle-grid">
+
+                <div class="muscle-card" onclick="openExercises('chest')">
+                    <div class="muscle-svg-wrap">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="60" cy="60" rx="52" ry="52" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+                            <!-- torso outline -->
+                            <path d="M38 40 Q30 55 32 80 Q45 90 60 90 Q75 90 88 80 Q90 55 82 40" fill="none" stroke="#475569" stroke-width="1.5"/>
+                            <!-- left pec -->
+                            <path d="M38 40 Q46 35 58 42 Q64 52 60 62 Q50 68 40 60 Q32 52 38 40Z" fill="#6366f1" opacity="0.85"/>
+                            <!-- right pec -->
+                            <path d="M82 40 Q74 35 62 42 Q56 52 60 62 Q70 68 80 60 Q88 52 82 40Z" fill="#6366f1" opacity="0.85"/>
+                            <!-- sternum line -->
+                            <line x1="60" y1="36" x2="60" y2="64" stroke="#a5b4fc" stroke-width="1" opacity="0.6"/>
+                            <!-- clavicles -->
+                            <path d="M38 40 Q48 36 60 38 Q72 36 82 40" fill="none" stroke="#a5b4fc" stroke-width="1.5" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <div class="muscle-info">
+                        <h3>Chest</h3>
+                        <p>Pectoralis Major & Minor</p>
+                        <span class="muscle-tag">Push</span>
+                    </div>
+                </div>
+
+                <div class="muscle-card" onclick="openExercises('back')">
+                    <div class="muscle-svg-wrap">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="60" cy="60" rx="52" ry="52" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+                            <!-- spine -->
+                            <line x1="60" y1="28" x2="60" y2="92" stroke="#a5b4fc" stroke-width="1.5" opacity="0.5"/>
+                            <!-- left lat -->
+                            <path d="M60 35 Q44 38 36 50 Q32 62 38 76 Q48 82 58 78 Q62 60 60 35Z" fill="#6366f1" opacity="0.85"/>
+                            <!-- right lat -->
+                            <path d="M60 35 Q76 38 84 50 Q88 62 82 76 Q72 82 62 78 Q58 60 60 35Z" fill="#6366f1" opacity="0.85"/>
+                            <!-- traps -->
+                            <path d="M40 30 Q60 24 80 30 Q74 38 60 36 Q46 38 40 30Z" fill="#818cf8" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <div class="muscle-info">
+                        <h3>Back</h3>
+                        <p>Lats, Traps & Rhomboids</p>
+                        <span class="muscle-tag">Pull</span>
+                    </div>
+                </div>
+
+                <div class="muscle-card" onclick="openExercises('shoulders')">
+                    <div class="muscle-svg-wrap">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="60" cy="60" rx="52" ry="52" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+                            <!-- left deltoid -->
+                            <ellipse cx="34" cy="56" rx="16" ry="20" fill="#6366f1" opacity="0.85" transform="rotate(-10 34 56)"/>
+                            <!-- right deltoid -->
+                            <ellipse cx="86" cy="56" rx="16" ry="20" fill="#6366f1" opacity="0.85" transform="rotate(10 86 56)"/>
+                            <!-- neck/trap base -->
+                            <path d="M48 36 Q60 30 72 36 Q70 44 60 46 Q50 44 48 36Z" fill="#818cf8" opacity="0.75"/>
+                            <!-- anterior lines -->
+                            <path d="M34 44 Q38 54 34 66" fill="none" stroke="#a5b4fc" stroke-width="1" opacity="0.5"/>
+                            <path d="M86 44 Q82 54 86 66" fill="none" stroke="#a5b4fc" stroke-width="1" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <div class="muscle-info">
+                        <h3>Shoulders</h3>
+                        <p>Anterior, Lateral & Posterior Deltoids</p>
+                        <span class="muscle-tag">Push</span>
+                    </div>
+                </div>
+
+                <div class="muscle-card" onclick="openExercises('biceps')">
+                    <div class="muscle-svg-wrap">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="60" cy="60" rx="52" ry="52" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+                            <!-- left arm outline -->
+                            <path d="M30 34 Q22 50 24 72 Q28 80 36 80 Q44 80 46 70 Q48 56 42 34Z" fill="#475569"/>
+                            <!-- left bicep peak -->
+                            <path d="M30 42 Q24 52 26 64 Q30 72 38 70 Q44 64 42 50 Q40 40 30 42Z" fill="#6366f1" opacity="0.9"/>
+                            <!-- right arm outline -->
+                            <path d="M90 34 Q98 50 96 72 Q92 80 84 80 Q76 80 74 70 Q72 56 78 34Z" fill="#475569"/>
+                            <!-- right bicep peak -->
+                            <path d="M90 42 Q96 52 94 64 Q90 72 82 70 Q76 64 78 50 Q80 40 90 42Z" fill="#6366f1" opacity="0.9"/>
+                        </svg>
+                    </div>
+                    <div class="muscle-info">
+                        <h3>Biceps</h3>
+                        <p>Biceps Brachii & Brachialis</p>
+                        <span class="muscle-tag">Pull</span>
+                    </div>
+                </div>
+
+                <div class="muscle-card" onclick="openExercises('triceps')">
+                    <div class="muscle-svg-wrap">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="60" cy="60" rx="52" ry="52" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+                            <!-- left arm back -->
+                            <path d="M30 34 Q20 52 22 74 Q28 82 38 80 Q46 78 46 68 Q46 52 40 34Z" fill="#475569"/>
+                            <!-- left tricep (3 heads visible as horseshoe) -->
+                            <path d="M28 46 Q20 58 22 70 Q28 78 38 76 Q44 70 44 58 Q42 46 34 42 Q30 42 28 46Z" fill="#6366f1" opacity="0.9"/>
+                            <path d="M30 52 Q28 62 32 68" fill="none" stroke="#a5b4fc" stroke-width="1.2" opacity="0.6"/>
+                            <!-- right arm back -->
+                            <path d="M90 34 Q100 52 98 74 Q92 82 82 80 Q74 78 74 68 Q74 52 80 34Z" fill="#475569"/>
+                            <!-- right tricep -->
+                            <path d="M92 46 Q100 58 98 70 Q92 78 82 76 Q76 70 76 58 Q78 46 86 42 Q90 42 92 46Z" fill="#6366f1" opacity="0.9"/>
+                            <path d="M90 52 Q92 62 88 68" fill="none" stroke="#a5b4fc" stroke-width="1.2" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <div class="muscle-info">
+                        <h3>Triceps</h3>
+                        <p>Long, Lateral & Medial Heads</p>
+                        <span class="muscle-tag">Push</span>
+                    </div>
+                </div>
+
+                <div class="muscle-card" onclick="openExercises('abs')">
+                    <div class="muscle-svg-wrap">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="60" cy="60" rx="52" ry="52" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+                            <!-- torso -->
+                            <path d="M42 28 Q35 60 38 92 Q48 98 60 98 Q72 98 82 92 Q85 60 78 28Z" fill="#334155"/>
+                            <!-- linea alba (center line) -->
+                            <line x1="60" y1="28" x2="60" y2="90" stroke="#a5b4fc" stroke-width="1" opacity="0.4"/>
+                            <!-- 3 pairs of ab segments -->
+                            <rect x="46" y="32" width="12" height="14" rx="4" fill="#6366f1" opacity="0.9"/>
+                            <rect x="62" y="32" width="12" height="14" rx="4" fill="#6366f1" opacity="0.9"/>
+                            <rect x="46" y="50" width="12" height="14" rx="4" fill="#6366f1" opacity="0.85"/>
+                            <rect x="62" y="50" width="12" height="14" rx="4" fill="#6366f1" opacity="0.85"/>
+                            <rect x="46" y="68" width="12" height="13" rx="4" fill="#6366f1" opacity="0.75"/>
+                            <rect x="62" y="68" width="12" height="13" rx="4" fill="#6366f1" opacity="0.75"/>
+                            <!-- obliques -->
+                            <path d="M42 38 Q36 56 38 76" fill="none" stroke="#818cf8" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+                            <path d="M78 38 Q84 56 82 76" fill="none" stroke="#818cf8" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="muscle-info">
+                        <h3>Abs</h3>
+                        <p>Rectus Abdominis & Obliques</p>
+                        <span class="muscle-tag">Core</span>
+                    </div>
+                </div>
+
+                <div class="muscle-card" onclick="openExercises('quadriceps')">
+                    <div class="muscle-svg-wrap">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="60" cy="60" rx="52" ry="52" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+                            <!-- left leg -->
+                            <path d="M36 28 Q28 50 30 90 Q36 96 44 94 Q52 90 50 50 Q48 30 36 28Z" fill="#334155"/>
+                            <!-- left quad segments -->
+                            <path d="M36 30 Q30 46 32 62 Q36 70 42 68 Q48 62 48 46 Q46 32 36 30Z" fill="#6366f1" opacity="0.9"/>
+                            <path d="M34 28 Q40 30 48 46 Q44 30 36 28Z" fill="#818cf8" opacity="0.7"/>
+                            <!-- right leg -->
+                            <path d="M84 28 Q92 50 90 90 Q84 96 76 94 Q68 90 70 50 Q72 30 84 28Z" fill="#334155"/>
+                            <!-- right quad segments -->
+                            <path d="M84 30 Q90 46 88 62 Q84 70 78 68 Q72 62 72 46 Q74 32 84 30Z" fill="#6366f1" opacity="0.9"/>
+                            <path d="M86 28 Q80 30 72 46 Q76 30 84 28Z" fill="#818cf8" opacity="0.7"/>
+                        </svg>
+                    </div>
+                    <div class="muscle-info">
+                        <h3>Quadriceps</h3>
+                        <p>4-headed Anterior Thigh Muscle</p>
+                        <span class="muscle-tag">Legs</span>
+                    </div>
+                </div>
+
+                <div class="muscle-card" onclick="openExercises('hamstrings')">
+                    <div class="muscle-svg-wrap">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="60" cy="60" rx="52" ry="52" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+                            <!-- left posterior leg -->
+                            <path d="M36 28 Q26 52 28 88 Q34 96 44 94 Q52 90 52 52 Q50 30 36 28Z" fill="#6366f1" opacity="0.9"/>
+                            <!-- left hamstring split -->
+                            <path d="M36 30 Q30 54 32 78" fill="none" stroke="#a5b4fc" stroke-width="1.5" opacity="0.6"/>
+                            <path d="M46 30 Q42 52 42 78" fill="none" stroke="#a5b4fc" stroke-width="1.5" opacity="0.6"/>
+                            <!-- right posterior leg -->
+                            <path d="M84 28 Q94 52 92 88 Q86 96 76 94 Q68 90 68 52 Q70 30 84 28Z" fill="#6366f1" opacity="0.9"/>
+                            <!-- right hamstring split -->
+                            <path d="M84 30 Q90 54 88 78" fill="none" stroke="#a5b4fc" stroke-width="1.5" opacity="0.6"/>
+                            <path d="M74 30 Q78 52 78 78" fill="none" stroke="#a5b4fc" stroke-width="1.5" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <div class="muscle-info">
+                        <h3>Hamstrings</h3>
+                        <p>Posterior Thigh Muscles</p>
+                        <span class="muscle-tag">Legs</span>
+                    </div>
+                </div>
+
+                <div class="muscle-card" onclick="openExercises('glutes')">
+                    <div class="muscle-svg-wrap">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="60" cy="60" rx="52" ry="52" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+                            <!-- left glute -->
+                            <path d="M28 46 Q24 62 30 78 Q38 88 52 84 Q62 78 60 62 Q56 46 42 38 Q32 36 28 46Z" fill="#6366f1" opacity="0.9"/>
+                            <!-- right glute -->
+                            <path d="M92 46 Q96 62 90 78 Q82 88 68 84 Q58 78 60 62 Q64 46 78 38 Q88 36 92 46Z" fill="#6366f1" opacity="0.9"/>
+                            <!-- glute crease -->
+                            <path d="M30 76 Q46 84 60 82 Q74 84 90 76" fill="none" stroke="#a5b4fc" stroke-width="1.2" opacity="0.5"/>
+                            <!-- gluteal fold -->
+                            <path d="M60 44 L60 82" fill="none" stroke="#1e293b" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="muscle-info">
+                        <h3>Glutes</h3>
+                        <p>Gluteus Maximus, Medius & Minimus</p>
+                        <span class="muscle-tag">Legs</span>
+                    </div>
+                </div>
+
+                <div class="muscle-card" onclick="openExercises('calves')">
+                    <div class="muscle-svg-wrap">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="60" cy="60" rx="52" ry="52" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+                            <!-- left calf -->
+                            <path d="M34 24 Q28 44 30 66 Q32 80 38 88 Q44 92 48 86 Q52 76 50 58 Q48 38 40 24Z" fill="#334155"/>
+                            <path d="M34 26 Q28 46 30 64 Q32 76 38 82 Q44 80 46 68 Q48 52 44 30 Q40 24 34 26Z" fill="#6366f1" opacity="0.9"/>
+                            <!-- left gastrocnemius split -->
+                            <path d="M36 34 Q34 54 36 70" fill="none" stroke="#a5b4fc" stroke-width="1.2" opacity="0.5"/>
+                            <!-- right calf -->
+                            <path d="M86 24 Q92 44 90 66 Q88 80 82 88 Q76 92 72 86 Q68 76 70 58 Q72 38 80 24Z" fill="#334155"/>
+                            <path d="M86 26 Q92 46 90 64 Q88 76 82 82 Q76 80 74 68 Q72 52 76 30 Q80 24 86 26Z" fill="#6366f1" opacity="0.9"/>
+                            <path d="M84 34 Q86 54 84 70" fill="none" stroke="#a5b4fc" stroke-width="1.2" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <div class="muscle-info">
+                        <h3>Calves</h3>
+                        <p>Gastrocnemius & Soleus</p>
+                        <span class="muscle-tag">Legs</span>
+                    </div>
+                </div>
+
+                <div class="muscle-card" onclick="openExercises('forearms')">
+                    <div class="muscle-svg-wrap">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="60" cy="60" rx="52" ry="52" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+                            <!-- left forearm -->
+                            <path d="M28 28 Q20 50 22 80 Q26 90 34 90 Q42 88 44 76 Q46 56 40 28Z" fill="#334155"/>
+                            <path d="M30 32 Q22 54 24 76 Q28 86 36 84 Q42 80 42 64 Q42 44 36 30Z" fill="#6366f1" opacity="0.9"/>
+                            <!-- tendons lines left -->
+                            <path d="M28 42 Q26 62 28 78" fill="none" stroke="#a5b4fc" stroke-width="1" opacity="0.5"/>
+                            <path d="M36 36 Q34 58 36 76" fill="none" stroke="#a5b4fc" stroke-width="1" opacity="0.5"/>
+                            <!-- right forearm -->
+                            <path d="M92 28 Q100 50 98 80 Q94 90 86 90 Q78 88 76 76 Q74 56 80 28Z" fill="#334155"/>
+                            <path d="M90 32 Q98 54 96 76 Q92 86 84 84 Q78 80 78 64 Q78 44 84 30Z" fill="#6366f1" opacity="0.9"/>
+                            <path d="M92 42 Q94 62 92 78" fill="none" stroke="#a5b4fc" stroke-width="1" opacity="0.5"/>
+                            <path d="M84 36 Q86 58 84 76" fill="none" stroke="#a5b4fc" stroke-width="1" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <div class="muscle-info">
+                        <h3>Forearms</h3>
+                        <p>Flexors, Extensors & Brachioradialis</p>
+                        <span class="muscle-tag">Pull</span>
+                    </div>
+                </div>
+
+                <div class="muscle-card" onclick="openExercises('traps')">
+                    <div class="muscle-svg-wrap">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="60" cy="60" rx="52" ry="52" fill="#1e293b" stroke="#6366f1" stroke-width="1.5"/>
+                            <!-- neck -->
+                            <rect x="52" y="18" width="16" height="20" rx="6" fill="#475569"/>
+                            <!-- upper trap diamond -->
+                            <path d="M60 22 Q38 30 32 48 Q40 56 60 52 Q80 56 88 48 Q82 30 60 22Z" fill="#6366f1" opacity="0.9"/>
+                            <!-- mid trap -->
+                            <path d="M32 48 Q28 64 36 74 Q48 80 60 76 Q72 80 84 74 Q92 64 88 48 Q80 56 60 52 Q40 56 32 48Z" fill="#6366f1" opacity="0.75"/>
+                            <!-- lower trap -->
+                            <path d="M36 74 Q44 86 60 88 Q76 86 84 74 Q72 80 60 76 Q48 80 36 74Z" fill="#818cf8" opacity="0.65"/>
+                            <!-- spine line -->
+                            <line x1="60" y1="24" x2="60" y2="86" stroke="#a5b4fc" stroke-width="1" opacity="0.4"/>
+                        </svg>
+                    </div>
+                    <div class="muscle-info">
+                        <h3>Traps</h3>
+                        <p>Upper, Middle & Lower Trapezius</p>
+                        <span class="muscle-tag">Pull</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Exercise Modal -->
+        <div id="exercise-modal" class="ex-modal-overlay" onclick="closeExerciseModal(event)">
+            <div class="ex-modal">
+                <button class="ex-modal-close" onclick="closeModal()">✕</button>
+                <div class="ex-modal-header">
+                    <div class="ex-modal-icon" id="ex-modal-icon">💪</div>
+                    <div>
+                        <h2 id="ex-modal-title">Exercises</h2>
+                        <p id="ex-modal-sub" class="ex-modal-sub"></p>
+                    </div>
+                </div>
+                <div class="ex-exercise-list" id="ex-exercise-list"></div>
+            </div>
+        </div>
+
+
+        <!-- Call to Action Section -->
+        <section id="ai-coach" class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Elevate Your Game?</h2>
+                <p>Start your journey to athletic excellence with AI-powered coaching</p>
+                <button class="btn-large" onclick="toggleChatbot()">Launch AI Coach Now</button>
+            </div>
+        </section>
+
+        <!-- CalCount Section -->
+        <section id="calcount" class="calcount-section">
+            <div class="section-header">
+                <span class="section-badge">Nutrition & Energy</span>
+                <h2 class="section-title">Calorie Calculator</h2>
+                <p class="section-subtitle">Find your daily calorie needs and sport-specific burn rate based on your body stats</p>
+            </div>
+
+            <div class="calcount-wrapper">
+                <!-- Input Card -->
+                <div class="calcount-form-card">
+                    <h3 class="cc-card-title">📋 Your Details</h3>
+
+                    <div class="cc-row">
+                        <div class="cc-field">
+                            <label>Weight (kg)</label>
+                            <input type="number" id="cc-weight" placeholder="e.g. 70" min="20" max="300" />
+                        </div>
+                        <div class="cc-field">
+                            <label>Height (cm)</label>
+                            <input type="number" id="cc-height" placeholder="e.g. 175" min="100" max="250" />
+                        </div>
+                    </div>
+
+                    <div class="cc-row">
+                        <div class="cc-field">
+                            <label>Age (years)</label>
+                            <input type="number" id="cc-age" placeholder="e.g. 25" min="10" max="100" />
+                        </div>
+                        <div class="cc-field">
+                            <label>Gender</label>
+                            <div class="cc-gender-group">
+                                <label class="cc-radio">
+                                    <input type="radio" name="cc-gender" value="male" /> Male
+                                </label>
+                                <label class="cc-radio">
+                                    <input type="radio" name="cc-gender" value="female" /> Female
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cc-field cc-full">
+                        <label>Activity Level</label>
+                        <select id="cc-activity">
+                            <option value="">— Select activity level —</option>
+                            <option value="sedentary">Sedentary (desk job, no exercise)</option>
+                            <option value="light">Lightly Active (1–3 days/week)</option>
+                            <option value="moderate">Moderately Active (3–5 days/week)</option>
+                            <option value="active">Very Active (6–7 days/week)</option>
+                            <option value="very_active">Athlete (2× training/day)</option>
+                        </select>
+                    </div>
+
+                    <div class="cc-field cc-full">
+                        <label>Your Sport</label>
+                        <select id="cc-sport">
+                            <option value="">— Select your sport —</option>
+                            <optgroup label="🏋️ Gym Training">
+                                <option>Gym – Bodybuilding</option>
+                                <option>Gym – Strength Training</option>
+                                <option>Gym – HIIT</option>
+                                <option>Gym – CrossFit</option>
+                                <option>Gym – Cardio (Treadmill/Bike)</option>
+                                <option>Gym – Powerlifting</option>
+                                <option>Gym – Calisthenics</option>
+                            </optgroup>
+                            <optgroup label="Team Sports">
+                                <option>Cricket</option><option>Football</option>
+                                <option>Basketball</option><option>Volleyball</option>
+                                <option>Hockey</option><option>Kabaddi</option>
+                                <option>Kho Kho</option><option>Rugby</option>
+                                <option>Baseball</option><option>American Football</option>
+                                <option>Handball</option>
+                            </optgroup>
+                            <optgroup label="Racquet Sports">
+                                <option>Badminton</option><option>Tennis</option>
+                                <option>Table Tennis</option><option>Squash</option>
+                                <option>Pickleball</option>
+                            </optgroup>
+                            <optgroup label="Individual Sports">
+                                <option>Athletics</option><option>Swimming</option>
+                                <option>Boxing</option><option>Wrestling</option>
+                                <option>Gymnastics</option><option>Cycling</option>
+                                <option>Weightlifting</option><option>Taekwondo</option>
+                                <option>Judo</option><option>Golf</option>
+                                <option>Archery</option>
+                            </optgroup>
+                            <optgroup label="Board &amp; Card Games">
+                                <option>Chess</option><option>Carrom</option>
+                                <option>Ludo</option><option>Checkers</option>
+                                <option>Scrabble</option><option>Backgammon</option>
+                                <option>Monopoly</option><option>Poker</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div id="cc-error" class="cc-error" style="display:none;"></div>
+
+                    <div class="cc-buttons">
+                        <button class="cc-btn-primary" onclick="calculateCalories()">🔥 Calculate</button>
+                        <button class="cc-btn-secondary" onclick="resetCalc()">↺ Reset</button>
+                    </div>
+                </div>
+
+                <!-- Results Card -->
+                <div class="calcount-result-card" id="cc-result" style="display:none;">
+                    <h3 class="cc-card-title">📊 Your Results</h3>
+
+                    <div class="cc-stats-row">
+                        <div class="cc-stat-box cc-stat-blue">
+                            <div class="cc-stat-label">Basal Metabolic Rate</div>
+                            <div class="cc-stat-value" id="cc-bmr">—</div>
+                            <div class="cc-stat-sub">Calories at complete rest</div>
+                        </div>
+                        <div class="cc-stat-box cc-stat-purple">
+                            <div class="cc-stat-label">Daily Calorie Need (TDEE)</div>
+                            <div class="cc-stat-value" id="cc-tdee">—</div>
+                            <div class="cc-stat-sub">With your activity level</div>
+                        </div>
+                    </div>
+
+                    <div class="cc-sport-burn">
+                        <div class="cc-sport-burn-icon">🏃</div>
+                        <div>
+                            <div class="cc-sport-burn-title">Sport Calorie Burn — <span id="cc-sport-name">your sport</span></div>
+                            <div class="cc-sport-burn-value" id="cc-sport-burn">—</div>
+                        </div>
+                    </div>
+
+                    <div class="cc-goals">
+                        <h4>Daily Calorie Goals</h4>
+                        <div class="cc-goals-grid">
+                            <div class="cc-goal-item cc-goal-green">
+                                <span class="cc-goal-icon">⚖️</span>
+                                <span class="cc-goal-label">Maintain Weight</span>
+                                <span class="cc-goal-value" id="cc-maintain">—</span>
+                            </div>
+                            <div class="cc-goal-item cc-goal-orange">
+                                <span class="cc-goal-icon">📉</span>
+                                <span class="cc-goal-label">Lose Weight</span>
+                                <span class="cc-goal-value" id="cc-lose">—</span>
+                            </div>
+                            <div class="cc-goal-item cc-goal-blue">
+                                <span class="cc-goal-icon">💪</span>
+                                <span class="cc-goal-label">Build Muscle</span>
+                                <span class="cc-goal-value" id="cc-gain">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cc-bottom-row">
+                        <div class="cc-bmi-box">
+                            <div class="cc-bmi-label">BMI</div>
+                            <div class="cc-bmi-value" id="cc-bmi">—</div>
+                        </div>
+                        <div class="cc-macros-box">
+                            <div class="cc-macros-title">Recommended Macros (maintain)</div>
+                            <div class="cc-macros-grid">
+                                <div class="cc-macro"><span class="cc-macro-dot cc-dot-red"></span>Protein<strong id="cc-protein">—</strong></div>
+                                <div class="cc-macro"><span class="cc-macro-dot cc-dot-yellow"></span>Fats<strong id="cc-fat">—</strong></div>
+                                <div class="cc-macro"><span class="cc-macro-dot cc-dot-blue"></span>Carbs<strong id="cc-carbs">—</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════  DIET PLANNER SECTION  ══════════════ -->
+        <section id="diet-planner" class="diet-section">
+            <div class="section-header">
+                <span class="section-badge">AI-Powered Nutrition</span>
+                <h2 class="section-title">Personalised Diet Planner</h2>
+                <p class="section-subtitle">Tell us about yourself and your goal — we'll generate a full daily meal plan tailored just for you</p>
+            </div>
+
+            <div class="diet-wrapper">
+                <!-- ── Form Card ── -->
+                <div class="diet-form-card" id="diet-form-card">
+                    <h3 class="cc-card-title">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:8px"><path d="M12 2a7 7 0 0 1 7 7c0 4-3 6-4 9H9c-1-3-4-5-4-9a7 7 0 0 1 7-7z"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                        Your Details
+                    </h3>
+
+                    <div class="cc-row">
+                        <div class="cc-field">
+                            <label>Age</label>
+                            <input type="number" id="dp-age" placeholder="e.g. 25" min="10" max="100"/>
+                        </div>
+                        <div class="cc-field">
+                            <label>Weight (kg)</label>
+                            <input type="number" id="dp-weight" placeholder="e.g. 70" min="30" max="300"/>
+                        </div>
+                    </div>
+
+                    <div class="cc-row">
+                        <div class="cc-field">
+                            <label>Height (cm)</label>
+                            <input type="number" id="dp-height" placeholder="e.g. 175" min="100" max="250"/>
+                        </div>
+                        <div class="cc-field">
+                            <label>Gender</label>
+                            <div class="cc-gender-group">
+                                <label class="cc-radio"><input type="radio" name="dp-gender" value="Male" checked/><span>Male</span></label>
+                                <label class="cc-radio"><input type="radio" name="dp-gender" value="Female"/><span>Female</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cc-row">
+                        <div class="cc-field">
+                            <label>Activity Level</label>
+                            <select id="dp-activity">
+                                <option value="sedentary">Sedentary (little / no exercise)</option>
+                                <option value="light" selected>Light (1–3 days/week)</option>
+                                <option value="moderate">Moderate (3–5 days/week)</option>
+                                <option value="active">Active (6–7 days/week)</option>
+                                <option value="very_active">Very Active (physical job + training)</option>
+                            </select>
+                        </div>
+                        <div class="cc-field">
+                            <label>Dietary Preference</label>
+                            <select id="dp-diet-type">
+                                <option value="non-vegetarian">Non-Vegetarian</option>
+                                <option value="vegetarian">Vegetarian</option>
+                                <option value="vegan">Vegan</option>
+                                <option value="pescatarian">Pescatarian</option>
+                                <option value="keto">Keto</option>
+                                <option value="mediterranean">Mediterranean</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="cc-row">
+                        <div class="cc-field">
+                            <label>Your Goal</label>
+                            <div class="diet-goal-group">
+                                <button class="diet-goal-btn active" data-goal="weight_loss" onclick="selectDietGoal(this,'weight_loss')">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                                    Weight Loss
+                                </button>
+                                <button class="diet-goal-btn" data-goal="weight_gain" onclick="selectDietGoal(this,'weight_gain')">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>
+                                    Weight Gain
+                                </button>
+                                <button class="diet-goal-btn" data-goal="maintain" onclick="selectDietGoal(this,'maintain')">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                    Maintain
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cc-full">
+                        <div class="cc-field">
+                            <label>Allergies / Foods to Avoid <span style="color:var(--text-dim);font-weight:400">(optional)</span></label>
+                            <input type="text" id="dp-allergies" placeholder="e.g. nuts, dairy, gluten…"/>
+                        </div>
+                    </div>
+
+                    <div id="dp-error" class="cc-error" style="display:none;"></div>
+
+                    <div class="cc-buttons">
+                        <button class="cc-btn-primary" onclick="generateDietPlan()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:6px"><path d="M12 2a7 7 0 0 1 7 7c0 4-3 6-4 9H9c-1-3-4-5-4-9a7 7 0 0 1 7-7z"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                            Generate My Diet Plan
+                        </button>
+                        <button class="cc-btn-secondary" onclick="resetDietPlanner()">↺ Reset</button>
+                    </div>
+                </div>
+
+                <!-- ── Result Card ── -->
+                <div class="diet-result-card" id="diet-result-card" style="display:none;">
+                    <div class="diet-result-header">
+                        <div>
+                            <h3 class="cc-card-title" style="margin-bottom:0.25rem">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:8px"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                                Your Personalised Plan
+                            </h3>
+                            <p id="dp-result-subtitle" style="color:var(--text-dim);font-size:0.85rem;margin:0"></p>
+                        </div>
+                        <button class="diet-back-btn" onclick="resetDietPlanner()">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                            Edit Details
+                        </button>
+                    </div>
+
+                    <!-- Calorie Summary Chips -->
+                    <div class="dp-cal-strip" id="dp-cal-strip"></div>
+
+                    <!-- Streaming meal plan output -->
+                    <div class="diet-plan-output" id="diet-plan-output">
+                        <div class="dp-loading" id="dp-loading">
+                            <div class="dp-spinner"></div>
+                            <span>Crafting your personalised meal plan…</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Enhanced Chatbot Window -->
+    <div id="chatbot-window" class="chatbot-window-new">
+        <div class="chatbot-header-new">
+            <div class="header-left">
+                <div class="coach-avatar">🤖</div>
+                <div class="header-info">
+                    <div class="coach-name" id="selected-sport">AI Coach</div>
+                    <div class="coach-status">Online • Ready to help</div>
+                </div>
+            </div>
+            <button class="close-btn-new" onclick="toggleChatbot()">✕</button>
+        </div>
+        
+        <div class="chat-messages-new" id="chat-messages">
+            <div class="message-group bot">
+                <div class="message-avatar">🤖</div>
+                <div class="message-bubble bot-bubble">
+                    <p>Welcome to Sports Master! 👋</p>
+                    <p>I'm your AI coach. Select a sport and ask me anything about techniques, training, rules, and strategies!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <div id="text-input-section" class="input-box">
+                <input type="text" id="user-input" placeholder="Ask about techniques, training tips, rules..." />
+                <button class="send-btn" onclick="sendMessage()">
+                    <span>➤</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab-new" onclick="toggleChatbot()">
+        <span class="fab-icon-new">💬</span>
+        <span class="fab-text">AI Coach</span>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+    // ==============================================
+    //  DIET PLANNER -- SSE streaming via Flask /diet
+    // ==============================================
+
+    var selectedDietGoal = 'weight_loss';
+
+    function selectDietGoal(btn, goal) {
+        document.querySelectorAll('.diet-goal-btn').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        selectedDietGoal = goal;
+    }
+
+    function resetDietPlanner() {
+        document.getElementById('diet-form-card').style.display = 'block';
+        document.getElementById('diet-result-card').style.display = 'none';
+        document.getElementById('dp-error').style.display = 'none';
+    }
+
+    function calculateDietCalories(weight, height, age, gender, activity, goal) {
+        var bmr = gender === 'Male'
+            ? 10 * weight + 6.25 * height - 5 * age + 5
+            : 10 * weight + 6.25 * height - 5 * age - 161;
+        var activityMap = { sedentary:1.2, light:1.375, moderate:1.55, active:1.725, very_active:1.9 };
+        var tdee = Math.round(bmr * (activityMap[activity] || 1.375));
+        var target = tdee;
+        if (goal === 'weight_loss') target = Math.round(tdee - 500);
+        if (goal === 'weight_gain') target = Math.round(tdee + 400);
+        return {
+            bmr: Math.round(bmr), tdee: tdee, target: target,
+            protein: Math.round((target * 0.30) / 4),
+            carbs:   Math.round((target * 0.40) / 4),
+            fat:     Math.round((target * 0.30) / 9)
+        };
+    }
+
+    async function generateDietPlan() {
+        var age      = parseInt(document.getElementById('dp-age').value);
+        var weight   = parseFloat(document.getElementById('dp-weight').value);
+        var height   = parseFloat(document.getElementById('dp-height').value);
+        var genderEl = document.querySelector('input[name="dp-gender"]:checked');
+        var gender   = genderEl ? genderEl.value : 'Male';
+        var activity = document.getElementById('dp-activity').value;
+        var dietType = document.getElementById('dp-diet-type').value;
+        var allergies= document.getElementById('dp-allergies').value.trim();
+        var goal     = selectedDietGoal;
+
+        var errEl = document.getElementById('dp-error');
+        errEl.style.display = 'none';
+
+        if (!age || age < 10 || age > 100)          { showDpError('Please enter a valid age (10-100).'); return; }
+        if (!weight || weight < 30 || weight > 300)  { showDpError('Please enter a valid weight (30-300 kg).'); return; }
+        if (!height || height < 100 || height > 250) { showDpError('Please enter a valid height (100-250 cm).'); return; }
+
+        var macros = calculateDietCalories(weight, height, age, gender, activity, goal);
+
+        document.getElementById('diet-form-card').style.display = 'none';
+        document.getElementById('diet-result-card').style.display = 'block';
+
+        var goalLabel = { weight_loss:'Weight Loss', weight_gain:'Weight Gain', maintain:'Maintain Weight' }[goal];
+        var activityLabel = { sedentary:'Sedentary', light:'Lightly Active', moderate:'Moderately Active', active:'Active', very_active:'Very Active' }[activity];
+
+        document.getElementById('dp-result-subtitle').textContent =
+            gender + ' \u00b7 ' + age + ' yrs \u00b7 ' + weight + ' kg \u00b7 ' + height + ' cm \u00b7 ' + dietType + ' \u00b7 ' + goalLabel;
+
+        document.getElementById('dp-cal-strip').innerHTML =
+            '<div class="dp-chip dp-chip-blue"><span class="dp-chip-val">' + macros.tdee + '</span><span class="dp-chip-lbl">Maintenance</span></div>' +
+            '<div class="dp-chip dp-chip-green"><span class="dp-chip-val">' + macros.target + '</span><span class="dp-chip-lbl">Daily Target</span></div>' +
+            '<div class="dp-chip dp-chip-purple"><span class="dp-chip-val">' + macros.protein + 'g</span><span class="dp-chip-lbl">Protein</span></div>' +
+            '<div class="dp-chip dp-chip-orange"><span class="dp-chip-val">' + macros.carbs + 'g</span><span class="dp-chip-lbl">Carbs</span></div>' +
+            '<div class="dp-chip dp-chip-red"><span class="dp-chip-val">' + macros.fat + 'g</span><span class="dp-chip-lbl">Fat</span></div>';
+
+        var output = document.getElementById('diet-plan-output');
+        output.innerHTML = '<div class="dp-loading"><div class="dp-spinner"></div><span>Crafting your personalised meal plan...</span></div>';
+
+        var allergyNote = allergies ? ('\n- Foods to avoid: ' + allergies) : '';
+        var prompt =
+            'Create a detailed ONE-DAY meal plan for:\n' +
+            '- Age: ' + age + '  Gender: ' + gender + '  Weight: ' + weight + 'kg  Height: ' + height + 'cm\n' +
+            '- Activity Level: ' + activityLabel + '\n' +
+            '- Dietary Preference: ' + dietType + '\n' +
+            '- Goal: ' + goalLabel + '\n' +
+            '- Daily Calorie Target: ' + macros.target + ' kcal\n' +
+            '- Macros: Protein ' + macros.protein + 'g | Carbs ' + macros.carbs + 'g | Fat ' + macros.fat + 'g' +
+            allergyNote + '\n\n' +
+            'Meals to include: EARLY MORNING, BREAKFAST, MID-MORNING SNACK, LUNCH, EVENING SNACK, DINNER.\n' +
+            'Then: KEY TIPS (3 points for their goal) and HYDRATION sections.';
+
+        try {
+            var response = await fetch('http://localhost:5000/diet', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: prompt })
+            });
+
+            if (!response.ok) throw new Error('Server error ' + response.status);
+
+            var reader = response.body.getReader();
+            var decoder = new TextDecoder();
+            var buffer = '';
+            var fullText = '';
+            var streamStarted = false;
+
+            while (true) {
+                var chunk = await reader.read();
+                if (chunk.done) break;
+
+                buffer += decoder.decode(chunk.value, { stream: true });
+                var lines = buffer.split('\n');
+                buffer = lines.pop();
+
+                for (var i = 0; i < lines.length; i++) {
+                    var line = lines[i].trim();
+                    if (!line.startsWith('data:')) continue;
+                    var jsonStr = line.slice(5).trim();
+                    if (!jsonStr) continue;
+                    try {
+                        var data = JSON.parse(jsonStr);
+                        if (data.error) {
+                            output.innerHTML = '<div class="dp-error-inline"><strong>Backend error:</strong> ' + data.error + '</div>';
+                            return;
+                        }
+                        if (data.text) {
+                            fullText += data.text;
+                            if (!streamStarted) {
+                                output.innerHTML = '<div class="dp-stream-text" id="dp-stream-text"></div>';
+                                streamStarted = true;
+                            }
+                            var el = document.getElementById('dp-stream-text');
+                            if (el) el.innerHTML = fullText.replace(/\n/g, '<br>') + '<span class="stream-cursor">|</span>';
+                        }
+                        if (data.done && fullText) {
+                            output.innerHTML = '';
+                            renderDietPlan(output, fullText);
+                        }
+                    } catch(e) {}
+                }
+            }
+
+            if (fullText) {
+                output.innerHTML = '';
+                renderDietPlan(output, fullText);
+            }
+
+        } catch(err) {
+            output.innerHTML =
+                '<div class="dp-error-inline">' +
+                '<strong>Cannot connect to the backend.</strong><br>' +
+                'Run: <code style="background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:4px">python app.py</code> and refresh.<br><br>' +
+                '<small style="color:var(--text-dim)">' + err.message + '</small>' +
+                '</div>';
+        }
+    }
+
+    function renderDietPlan(container, text) {
+        var lines = text.split('\n').filter(function(l){ return l.trim(); });
+        var mealKeywords = ['EARLY MORNING','BREAKFAST','MID-MORNING','LUNCH','EVENING SNACK','EVENING','DINNER','BEDTIME','PRE-WORKOUT','POST-WORKOUT','KEY TIP','HYDRATION'];
+        var mealIcons = {
+            'EARLY MORNING':'\uD83C\uDF05', 'BREAKFAST':'\uD83C\uDF73',
+            'MID-MORNING':'\uD83C\uDF4E',   'LUNCH':'\uD83E\uDD57',
+            'EVENING SNACK':'\uD83C\uDF75',  'EVENING':'\uD83C\uDF75',
+            'DINNER':'\uD83C\uDF7D\uFE0F',  'BEDTIME':'\uD83C\uDF19',
+            'PRE-WORKOUT':'\u26A1',           'POST-WORKOUT':'\uD83D\uDCAA',
+            'KEY TIP':'\uD83D\uDCA1',        'HYDRATION':'\uD83D\uDCA7'
+        };
+
+        function getIcon(line) {
+            var upper = line.toUpperCase();
+            for (var k in mealIcons) { if (upper.indexOf(k) !== -1) return mealIcons[k]; }
+            return '\uD83E\uDD44';
+        }
+
+        function isMealHeader(line) {
+            var upper = line.toUpperCase();
+            var hasKeyword = mealKeywords.some(function(k){ return upper.indexOf(k) !== -1; });
+            var hasColon = line.indexOf(':') !== -1;
+            var startsWithKeyword = mealKeywords.some(function(k){ return upper.startsWith(k); });
+            return hasKeyword && (hasColon || startsWithKeyword);
+        }
+
+        var mealBlocks = [];
+        var currentBlock = null;
+        for (var i = 0; i < lines.length; i++) {
+            var line = lines[i];
+            if (isMealHeader(line)) {
+                if (currentBlock) mealBlocks.push(currentBlock);
+                var upper2 = line.toUpperCase();
+                var isTips = upper2.indexOf('KEY TIP') !== -1 || upper2.indexOf('HYDRATION') !== -1;
+                currentBlock = { header: line.replace(/:$/, '').replace(/^#+\s*/, '').trim(), items: [], isTips: isTips };
+            } else if (currentBlock && line.trim()) {
+                currentBlock.items.push(line.trim());
+            }
+        }
+        if (currentBlock) mealBlocks.push(currentBlock);
+
+        if (mealBlocks.length === 0) {
+            container.innerHTML = '<div class="dp-plain-text">' + text.replace(/\n/g, '<br>') + '</div>';
+            return;
+        }
+
+        var html = '<div class="dp-meals-grid">';
+        for (var j = 0; j < mealBlocks.length; j++) {
+            var block = mealBlocks[j];
+            var cardClass = block.isTips ? 'dp-meal-card dp-tips-card' : 'dp-meal-card';
+            var itemsHtml = block.items.map(function(item){
+                return '<li>' + item.replace(/^[-\u2022*]\s*/, '') + '</li>';
+            }).join('');
+            html += '<div class="' + cardClass + '">' +
+                '<div class="dp-meal-header">' +
+                '<span class="dp-meal-icon">' + getIcon(block.header) + '</span>' +
+                '<span class="dp-meal-title">' + block.header + '</span>' +
+                '</div><ul class="dp-meal-items">' + itemsHtml + '</ul></div>';
+        }
+        html += '</div>';
+        container.innerHTML = html;
+    }
+
+    function showDpError(msg) {
+        var el = document.getElementById('dp-error');
+        el.textContent = msg;
+        el.style.display = 'block';
+    }
+    </script>
+</body>
+</html>
