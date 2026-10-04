@@ -196,7 +196,7 @@ async function sendMessage() {
     var fullText = '';
 
     try {
-        var response = await fetch('http://localhost:5000/chat', {
+        var response = await fetch('/chat', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: message, sport: selectedSport })

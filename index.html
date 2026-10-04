@@ -1325,7 +1325,7 @@
             'Then: KEY TIPS (3 points for their goal) and HYDRATION sections.';
 
         try {
-            var response = await fetch('http://localhost:5000/diet', {
+            var response = await fetch('/diet', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: prompt })

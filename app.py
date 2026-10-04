@@ -1,6 +1,6 @@
 import os
 import json
-from flask import Flask, request, jsonify, Response, stream_with_context
+from flask import Flask, request, jsonify, Response, stream_with_context, send_from_directory
 from flask_cors import CORS
 import google.generativeai as genai
 # Load environment variables (.env) with fallback to built-in reader
@@ -17,7 +17,7 @@ except ImportError:
                     k, v = line.split("=", 1)
                     os.environ.setdefault(k.strip(), v.strip().strip("'\""))
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)
 
 # ── API Key ───────────────────────────────────────────────────────────────────
@@ -47,7 +47,12 @@ SYSTEM_PROMPT = (
 
 @app.route('/')
 def home():
-    return jsonify({"message": "Sports Master API is running!"})
+    return send_from_directory('.', 'index.html')
+
+
+@app.route('/chat.html')
+def chat_page():
+    return send_from_directory('.', 'chat.html')
 
 
 @app.route('/chat', methods=['POST'])
